@@ -1,0 +1,14 @@
+
+
+<h3><%= mark_up(@article.title) %></h3>
+<p><%= @article.content %></p>
+
+<ul>
+  <li><%= link_to 'Modify this article', edit_article_path(@article) %></li>
+  <li><%= link_to 'Delete this article', article_path(@article),
+    method: :delete,
+    data: { confirm: "Are you sure?" } %></li>
+  <li><%= link_to 'Back to all articles', articles_path %></li>
+</ul>
+
+

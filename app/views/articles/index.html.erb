@@ -1,0 +1,10 @@
+<%= link_to "post a new article", new_article_path  %>
+
+<div class="articles_container">
+<% @articles.each do |article| %>
+<div class="article_list">
+<h4><%= link_to mark_up(article.title), article_path(article) %></h4>
+<p><%= article.content %></p>
+</div>
+<% end %>
+</div>

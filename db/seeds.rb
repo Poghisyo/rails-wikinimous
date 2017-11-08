@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# rails db:drop
+
+puts "planting the seeds"
+10.times {
+  a = Article.new(title: "\#\##{Faker::HitchhikersGuideToTheGalaxy.location}", content: Faker::HitchhikersGuideToTheGalaxy.quote)
+  a.save
+}
+puts "done"
